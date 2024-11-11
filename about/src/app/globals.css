@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+
+.text-theme {
+  color: var(--text-color);
+
+}
+
+body.light-mode .text-theme {
+  --text-color: #ffffff;
+
+}
+
+body.dark-mode .text-theme {
+  --text-color: #9b4d96;
+
+}
