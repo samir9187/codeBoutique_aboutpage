@@ -4,7 +4,7 @@ const Contact: React.FC = () => {
   return (
     <section className="py-16 bg-lightGalaxy dark:bg-galaxy text-galaxy dark:text-lightText">
       <div className="max-w-screen-xl mx-auto text-center">
-        <h2 className="text-3xl font-bold">Contact Us</h2>
+        <h2 className="text-3xl font-bold dark:text-yellow-500">Contact Us</h2>
         <p className="mt-4 text-xl dark:text-darkText">
           Feel free to reach out to us for inquiries or partnerships!
         </p>

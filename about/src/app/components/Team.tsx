@@ -4,7 +4,9 @@ const Team: React.FC = () => {
   return (
     <section className="py-16 bg-galaxy dark:bg-galaxy text-galaxy dark:text-lightText">
       <div className="max-w-screen-xl mx-auto text-center">
-        <h2 className="text-3xl text-lightText font-bold">Meet Our Team</h2>
+        <h2 className="text-3xl text-lightText font-bold dark:text-yellow-500">
+          Meet Our Team
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl dark:text-darkText font-semibold">

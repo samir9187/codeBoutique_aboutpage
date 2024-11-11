@@ -4,7 +4,9 @@ const Timeline: React.FC = () => {
   return (
     <section className="py-16 bg-galaxy dark:bg-galaxy text-galaxy dark:text-lightText">
       <div className="max-w-screen-xl mx-auto text-center">
-        <h2 className="text-3xl text-lightText font-bold">Our Journey</h2>
+        <h2 className="text-3xl text-lightText font-bold dark:text-yellow-500">
+          Our Journey
+        </h2>
         <div className="mt-8 flex justify-center gap-8 flex-wrap">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full sm:w-auto sm:max-w-xs">
             <h3 className="text-xl dark:text-darkText font-semibold">2019</h3>

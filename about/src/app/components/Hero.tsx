@@ -8,8 +8,11 @@ const Hero: React.FC = () => {
     >
       <div className="bg-black bg-opacity-50 p-8 rounded-md">
         <h1 className="text-4xl font-semibold">
-          <span className="text-blue-500">Welcome 👋</span> to{" "}
-          <span className="text-blue-500">GalaxyCorp 🚀</span>
+          <span className="text-blue-500 dark:text-yellow-500">Welcome 👋</span>{" "}
+          to{" "}
+          <span className="text-blue-500 dark:text-yellow-500">
+            GalaxyCorp 🚀
+          </span>
         </h1>
 
         <p className="mt-4 text-xl dark:text-darkText text-lightText font-semibold leading-relaxed tracking-wide shadow-lg dark:shadow-none">
