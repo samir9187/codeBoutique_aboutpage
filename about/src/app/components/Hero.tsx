@@ -3,7 +3,8 @@ import React from "react";
 const Hero: React.FC = () => {
   return (
     <section
-      className="bg-cover bg-center h-96 flex items-center justify-center text-white"
+      // className="bg-cover bg-center h-96 flex items-center justify-center text-white"
+      className="bg-cover bg-center h-96 sm:h-80 md:h-96 lg:h-[500px] flex items-center justify-center text-white"
       style={{ backgroundImage: "url('/galaxy1.jpeg')" }}
     >
       <div className="bg-black bg-opacity-50 p-8 rounded-md">

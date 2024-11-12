@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
-
+import Link from "next/link";
 interface NavbarProps {
   toggleDarkMode: () => void;
   darkMode: boolean;
@@ -23,30 +23,30 @@ const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, darkMode }) => {
 
           {/* Desktop Menu Items */}
           <div className="hidden sm:flex sm:space-x-8">
-            <a
+            <Link
               href="/"
               className="text-lightText dark:text-darkText transition duration-300 hover:text-white"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="/about"
               className="text-lightText dark:text-darkText transition duration-300 hover:text-white"
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="/services"
               className="text-lightText dark:text-darkText transition duration-300 hover:text-white"
             >
               Services
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact"
               className="text-lightText dark:text-darkText transition duration-300 hover:text-white"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Dark Mode Toggle */}
@@ -96,30 +96,30 @@ const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, darkMode }) => {
         id="mobile-menu"
       >
         <div className="space-y-4 px-2 pt-2 pb-3">
-          <a
+          <Link
             href="/"
             className="text-lightText dark:text-darkText block text-base transition duration-300 hover:text-white"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className="text-lightText dark:text-darkText block text-base transition duration-300 hover:text-white"
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="/services"
             className="text-lightText dark:text-darkText block text-base transition duration-300 hover:text-white"
           >
             Services
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className="text-lightText dark:text-darkText block text-base transition duration-300 hover:text-white"
           >
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
