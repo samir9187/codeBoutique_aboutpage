@@ -15,8 +15,8 @@ const Mission: React.FC = () => {
           <p className="text-sm sm:text-lg opacity-80 mb-3 sm:mb-5">
             At GalaxyCorp, we believe in more than just selling products — we
             believe in making a difference. Our journey started with a simple
-            goal: to craft the world’s most comfortable hammocks. But as we
-            grew, so did our mission.
+            goal: to craft the world most comfortable hammocks. But as we grew,
+            so did our mission.
           </p>
         </div>
 

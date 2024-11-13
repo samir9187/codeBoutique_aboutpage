@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Contact: React.FC = () => {
@@ -32,12 +33,12 @@ const Contact: React.FC = () => {
             research together.
           </div>
           <div className="items-center p-6 pt-0 flex justify-between">
-            <a href="/support">
+            <Link href="/support">
               {" "}
               <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 rounded bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200 h-10 px-4 py-2">
                 Contact Us
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
