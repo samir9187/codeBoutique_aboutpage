@@ -8,7 +8,8 @@ const HeroSection: React.FC = () => {
           {/* Text Section */}
           <div className="md:mr-12 text-center md:text-left mt-8 md:mt-0">
             <p className="text-transparent bg-clip-text bg-[linear-gradient(to_right,_#000_0%,_#3c3cbf_50%)] dark:bg-[linear-gradient(to_right,_#3c3cbf_0%,_#FFFFFF_50%)] font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl break-words">
-            GalaxyCorp advances space exploration with cutting-edge research and innovative solutions.
+              GalaxyCorp advances space exploration with cutting-edge research
+              and innovative solutions.
             </p>
           </div>
 
