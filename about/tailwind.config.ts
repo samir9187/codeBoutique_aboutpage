@@ -13,9 +13,6 @@ module.exports = {
         lightText: "#ffffff", // White text color in light mode
         darkText: "#9b4d96", // Purple text color in dark mode (can be adjusted)
       },
-      backgroundImage: {
-        galaxy: "url('/galaxy1.jpeg')",
-      },
     },
   },
   plugins: [],

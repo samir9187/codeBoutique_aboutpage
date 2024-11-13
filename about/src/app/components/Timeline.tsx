@@ -1,35 +1,103 @@
+// import React from "react";
+
+// const Timeline: React.FC = () => {
+//   return (
+//     <section className="py-16 bg-white dark:bg-galaxy text-galaxy dark:text-lightText">
+//       <div className="max-w-screen-xl mx-auto text-center">
+//         {/* <h2 className="text-3xl  font-bold dark:text-yellow-500"> */}
+//         <h2 className="font-bold md:text-4xl mb-6 dark:text-yellow-400">
+//           Our Journey
+//         </h2>
+//         <div className="mt-8 flex justify-center gap-8 flex-wrap">
+//           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full sm:w-auto sm:max-w-xs">
+//             <h3 className="text-xl dark:text-darkText font-semibold">2019</h3>
+//             <p className="dark:text-darkText">
+//               Started with a mission to change the hiring landscape. We aim to
+//               streamline the recruitment process, reduce biases, and help
+//               businesses make data-driven hiring decisions. Our solutions are
+//               designed to improve the overall talent acquisition experience by
+//               integrating AI-driven tools and providing valuable insights into
+//               the hiring process.
+//             </p>
+//           </div>
+
+//           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full sm:w-auto sm:max-w-xs">
+//             <h3 className="text-xl dark:text-darkText font-semibold">2021</h3>
+//             <p className="dark:text-darkText">
+//               Launched our AI-powered ATS and Tech Assessment tools. These tools
+//               leverage cutting-edge technology to improve hiring efficiency,
+//               reduce biases, and offer personalized candidate experiences. Our
+//               platform provides businesses with actionable insights, helping
+//               them make informed decisions quickly and effectively.
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Timeline;
+
 import React from "react";
 
 const Timeline: React.FC = () => {
   return (
-    <section className="py-16 bg-galaxy dark:bg-galaxy text-galaxy dark:text-lightText">
-      <div className="max-w-screen-xl mx-auto text-center">
-        <h2 className="text-3xl text-lightText font-bold dark:text-yellow-500">
+    <section className="py-16 bg-white dark:bg-[rgba(2,8,26,1)] text-zinc-900 dark:text-white">
+      <div className="container px-6 mx-auto text-center">
+        <h2 className="font-bold md:text-4xl mb-6 dark:text-white">
           Our Journey
         </h2>
-        <div className="mt-8 flex justify-center gap-8 flex-wrap">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full sm:w-auto sm:max-w-xs">
-            <h3 className="text-xl dark:text-darkText font-semibold">2019</h3>
-            <p className="dark:text-darkText">
-              Started with a mission to change the hiring landscape. We aim to
-              streamline the recruitment process, reduce biases, and help
-              businesses make data-driven hiring decisions. Our solutions are
-              designed to improve the overall talent acquisition experience by
-              integrating AI-driven tools and providing valuable insights into
-              the hiring process.
-            </p>
-          </div>
+        <p className="text-lg font-normal mb-10 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
+          Our journey began with a mission to revolutionize space exploration
+          and research. At GalaxyCorp, we are committed to empowering
+          scientists, researchers, and space organizations with state-of-the-art
+          tools and data-driven insights to accelerate discoveries and make
+          informed, unbiased decisions.
+        </p>
 
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full sm:w-auto sm:max-w-xs">
-            <h3 className="text-xl dark:text-darkText font-semibold">2021</h3>
-            <p className="dark:text-darkText">
-              Launched our AI-powered ATS and Tech Assessment tools. These tools
-              leverage cutting-edge technology to improve hiring efficiency,
-              reduce biases, and offer personalized candidate experiences. Our
-              platform provides businesses with actionable insights, helping
-              them make informed decisions quickly and effectively.
-            </p>
-          </div>
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+          {[
+            {
+              year: "2019",
+              title: "The Beginning",
+              description:
+                "Our journey began with a mission to redefine space exploration. We aimed to streamline research processes, eliminate biases in space data analysis, and help organizations make data-driven decisions to explore the universe more efficiently.",
+            },
+            {
+              year: "2021",
+              title: "A New Era in Space Research",
+              description:
+                "With a vision to enhance space research, we focused on developing innovative technologies that could revolutionize the way we study the cosmos. Our goal was to empower scientists with the tools needed to make groundbreaking discoveries and push the boundaries of human knowledge.",
+            },
+            {
+              year: "2023",
+              title: "Expanding Horizons",
+              description:
+                "As we expanded our reach, our mission evolved to include fostering collaboration between space agencies and research institutions. By leveraging cutting-edge technologies, we worked to bridge the gap in space research, enabling more inclusive and impactful explorations of the unknown.",
+            },
+            {
+              year: "2024",
+              title: "Transforming the Future",
+              description:
+                "Building on our success, we advanced our capabilities in space exploration. Our focus was on using AI and data analytics to solve some of space exploration’s biggest challenges, from predicting celestial events to optimizing research strategies and ensuring the sustainability of missions.",
+            },
+          ].map((event, index) => (
+            <div
+              key={index}
+              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center group"
+            >
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white group-hover:text-yellow-400 transition-colors">
+                {event.year}
+              </h3>
+              <p className="text-lg font-semibold text-gray-800 dark:text-white">
+                {event.title}
+              </p>
+              <p className="text-gray-500 dark:text-gray-400 mt-2">
+                {event.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
