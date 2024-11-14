@@ -107,7 +107,6 @@
 //     </div>
 //   );
 // }
-
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Play, XIcon } from "lucide-react";
@@ -122,6 +121,13 @@ type AnimationStyle =
   | "fade"
   | "top-in-bottom-out"
   | "left-in-right-out";
+interface HeroVideoProps {
+  animationStyle?: AnimationStyle; // Use the type here if needed
+  videoSrc: string;
+  thumbnailSrc: string;
+  thumbnailAlt?: string;
+  className?: string;
+}
 
 // Define the animation variants object with corresponding styles
 const animationVariants = {
@@ -150,7 +156,7 @@ const animationVariants = {
     animate: { x: 0, opacity: 1 },
     exit: { x: "100%", opacity: 0 },
   },
-  "fade": {
+  fade: {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
     exit: { opacity: 0 },
@@ -228,7 +234,10 @@ export function HeroVideoDialog({
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
               className="relative w-full max-w-4xl aspect-video mx-4 md:mx-0"
             >
-              <motion.button className="absolute -top-16 right-0 text-white text-xl bg-neutral-900/50 ring-1 backdrop-blur-md rounded-full p-2 dark:bg-neutral-100/50 dark:text-black">
+              <motion.button
+                onClick={() => setIsVideoOpen(false)} // Close the video when clicked
+                className="absolute -top-16 right-0 text-white text-xl bg-neutral-900/50 ring-1 backdrop-blur-md rounded-full p-2 dark:bg-neutral-100/50 dark:text-black"
+              >
                 <XIcon className="size-5" />
               </motion.button>
               <div className="size-full border-2 border-white rounded-2xl overflow-hidden isolate z-[1] relative">
