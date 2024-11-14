@@ -24,7 +24,7 @@
 //   }, [darkMode]);
 
 //   return (
-//     <nav className="bg-white dark:bg-black shadow-md w-full fixed top-0 z-10 dark:text-white">
+//     <nav className="bg-white dark:bg-black shadow-md w-full fixed top-0 z-50 dark:text-white">
 //       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 //         <div className="relative flex items-center justify-between h-16">
 //           <div className="text-xl font-bold text-blue-600 dark:text-white">
@@ -147,7 +147,6 @@ import React, { useState, useEffect } from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
-// Define the interface for props
 interface NavbarProps {
   toggleDarkMode: () => void;
   darkMode: boolean;
@@ -161,6 +160,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, darkMode }) => {
   };
 
   useEffect(() => {
+    // Apply dark mode based on the darkMode prop
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -169,15 +169,16 @@ const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, darkMode }) => {
   }, [darkMode]);
 
   return (
-    <nav className="bg-white dark:bg-black shadow-md w-full fixed top-0 z-10 dark:text-white">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between h-16">
-          <div className="text-xl font-bold text-blue-600 dark:text-white">
+    <nav className="bg-white dark:bg-black shadow-md w-full fixed top-0 z-50 dark:text-white overflow-hidden">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="text-lg sm:text-xl font-bold text-blue-600 dark:text-white">
             GalaxyCorp
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex flex-1 justify-center space-x-6">
+          <div className="hidden lg:flex flex-1 justify-center space-x-4 md:space-x-6">
             <Link href="/" className="nav-link">
               Home
             </Link>
@@ -201,17 +202,17 @@ const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, darkMode }) => {
             </Link>
           </div>
 
-          {/* Right Side */}
-          <div className="flex items-center space-x-4">
+          {/* Right Side: Dark Mode Toggle and Login Button */}
+          <div className="flex items-center space-x-3 sm:space-x-4">
             <button onClick={toggleDarkMode} className="p-2 rounded-full">
               {darkMode ? (
-                <SunIcon className="h-5 w-5 text-yellow-500" />
+                <SunIcon className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-500" />
               ) : (
-                <MoonIcon className="h-5 w-5 text-gray-600" />
+                <MoonIcon className="h-5 w-5 sm:h-6 sm:w-6 text-gray-600" />
               )}
             </button>
             <Link href="/login">
-              <span className="btn-primary flex items-center space-x-2">
+              <span className="btn-primary flex items-center space-x-1 sm:space-x-2">
                 <span className="text-sm sm:text-base">Login</span>
                 <svg
                   className="arrow-icon h-4 w-4 sm:h-5 sm:w-5"
@@ -229,7 +230,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, darkMode }) => {
             </Link>
           </div>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Toggle Button */}
           <button
             onClick={toggleMobileMenu}
             className="lg:hidden p-2 rounded-md text-gray-600"
@@ -255,30 +256,48 @@ const Navbar: React.FC<NavbarProps> = ({ toggleDarkMode, darkMode }) => {
       <div
         className={`${
           isMobileMenuOpen ? "block" : "hidden"
-        } lg:hidden bg-white dark:bg-gray-800 w-full px-4 pt-4 pb-2`}
+        } lg:hidden bg-white dark:bg-gray-800 w-full px-4 pt-2 pb-2 transition-all`}
       >
         <Link
           href="/"
-          className="block px-2 py-2 text-gray-800 dark:text-gray-200 transition duration-300 hover:text-black dark:hover:text-white"
+          className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
         >
           Home
         </Link>
-        <Link href="/about" className="block px-2 py-2">
+        <Link
+          href="/about"
+          className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
+        >
           About
         </Link>
-        <Link href="/use-cases" className="block px-2 py-2">
+        <Link
+          href="/use-cases"
+          className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
+        >
           Use Cases
         </Link>
-        <Link href="/pricing" className="block px-2 py-2">
+        <Link
+          href="/pricing"
+          className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
+        >
           Pricing
         </Link>
-        <Link href="/resources" className="block px-2 py-2">
+        <Link
+          href="/resources"
+          className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
+        >
           Resources
         </Link>
-        <Link href="/blog" className="block px-2 py-2">
+        <Link
+          href="/blog"
+          className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
+        >
           Blog
         </Link>
-        <Link href="/support" className="block px-2 py-2">
+        <Link
+          href="/support"
+          className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
+        >
           Support
         </Link>
       </div>

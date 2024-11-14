@@ -50,3 +50,28 @@ body.dark-mode .text-theme {
   margin-left: 0.5rem;
   font-size: 1rem;
 }
+
+@keyframes gridAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-grid {
+  animation: gridAnimation 30s linear infinite;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.max-w-screen-xl {
+  max-width: 100%;
+}

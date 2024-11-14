@@ -1,4 +1,5 @@
 import React from "react";
+import { BorderBeam } from "./magicUIComp/MagicBeam";
 
 const Timeline: React.FC = () => {
   return (
@@ -44,8 +45,20 @@ const Timeline: React.FC = () => {
           ].map((event, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center group"
+              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center group relative"
             >
+              {/* Border Beam component */}
+              <BorderBeam
+                className="top-0 left-0 right-0 bottom-0"
+                size={250}
+                duration={20}
+                anchor={90}
+                borderWidth={2}
+                colorFrom="#ffaa40"
+                colorTo="#9c40ff"
+                delay={index * 1.5} // Add delay for each card
+              />
+
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white group-hover:text-yellow-400 transition-colors">
                 {event.year}
               </h3>

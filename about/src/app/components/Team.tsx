@@ -1,4 +1,46 @@
+// Team.tsx
 import React from "react";
+import { MagicCard } from "./magicUIComp/MagicCard"; // Import MagicCard component
+
+// Example team member data
+const teamMembers = [
+  {
+    name: "John Doe",
+    role: "Lead Engineer",
+    desc: "John leads the team with over 10 years of experience in space technology development.",
+    img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Fam2.jpg&w=96&q=75",
+  },
+  {
+    name: "Jane Smith",
+    role: "Software Developer",
+    desc: "Jane is a software engineer who focuses on creating innovative solutions for space exploration.",
+    img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Fam2.jpg&w=96&q=75",
+  },
+  {
+    name: "Alice Johnson",
+    role: "Research Scientist",
+    desc: "Alice specializes in research for space technologies and their application in real-world missions.",
+    img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Fam2.jpg&w=96&q=75",
+  },
+  {
+    name: "Bob Brown",
+    role: "Product Manager",
+    desc: "Bob manages the product lifecycle, from concept to launch, ensuring timely and quality delivery.",
+    img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Fam2.jpg&w=96&q=75",
+  },
+  {
+    name: "Sarah Green",
+    role: "UX Designer",
+    desc: "Sarah ensures the best user experience, designing interfaces that are intuitive and visually appealing.",
+    img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Fam2.jpg&w=96&q=75",
+  },
+  {
+    name: "Mark White",
+    role: "Data Scientist",
+    desc: "Mark analyzes complex data to extract valuable insights and support decision-making.",
+    img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Fam2.jpg&w=96&q=75",
+  },
+];
 
 const Team: React.FC = () => {
   return (
@@ -18,53 +60,15 @@ const Team: React.FC = () => {
           processes and create accessible technologies to enable organizations
           and researchers, big and small, to advance their discoveries and
           missions. Our goal is to make space more accessible, foster
-          innovation, and accelerate humanity understanding of the universe.
+          innovation, and accelerate humanity's understanding of the universe.
         </p>
 
         {/* Team Grid */}
         <div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-5xl mx-auto">
-          {[
-            {
-              name: "John Doe",
-              role: "CEO & Founder",
-              img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Fam2.jpg&w=96&q=75",
-              desc: "John has over 15 years of experience in the tech industry, leading teams to success with his innovative vision.",
-            },
-            {
-              name: "Jane Smith",
-              role: "CTO",
-              img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Fam2.jpg&w=96&q=75",
-              desc: "Jane brings a wealth of knowledge in software development and cloud architecture, steering the company's tech direction.",
-            },
-            {
-              name: "Bob Johnson",
-              role: "Lead Developer",
-              img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Fam2.jpg&w=96&q=75",
-              desc: "Bob specializes in full-stack development, leading projects that push technology’s boundaries with clean code practices.",
-            },
-            {
-              name: "Sam Johnson",
-              role: "HR Manager",
-              img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Fam2.jpg&w=96&q=75",
-              desc: "Sam fosters a supportive work environment, managing talent recruitment and contributing to a positive company culture.",
-            },
-            {
-              name: "Sammy Carlton",
-              role: "HR Manager",
-              img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Fam2.jpg&w=96&q=75",
-              desc: "Sammy works on employee relations and training programs, focusing on career development and engagement.",
-            },
-            {
-              name: "Alice Cooper",
-              role: "Marketing Director",
-              img: "https://everythingtalent.ai/_next/image?url=%2Fassets%2Fabout-us%2Four-team%2Fam2.jpg&w=96&q=75",
-              desc: "With over 10 years of experience, Alice leads impactful, customer-focused marketing strategies that drive results.",
-            },
-          ].map((member, index) => (
-            <div
+          {teamMembers.map((member, index) => (
+            <MagicCard
               key={index}
               className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg text-center group"
-              style={{ minHeight: "300px" }} // limits height on smaller screens
             >
               <div className="relative w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 overflow-hidden rounded-full shadow-md">
                 <img
@@ -84,7 +88,7 @@ const Team: React.FC = () => {
               <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">
                 {member.desc}
               </p>
-            </div>
+            </MagicCard>
           ))}
         </div>
       </div>

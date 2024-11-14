@@ -1,11 +1,13 @@
-import Link from "next/link";
 import React from "react";
+import { NeonGradientCard } from "./magicUIComp/NeonGradientCard";
+import Link from "next/link";
+import { CoolMode } from "./magicUIComp/CoolMode";
 
 const Contact: React.FC = () => {
   return (
     <section className="py-12 relative z-20 bg-white dark:bg-[rgba(2,8,26,1)] text-galaxy dark:text-gray-300">
       <div className="py-12 relative z-20">
-        <div className="border bg-card text-card-foreground shadow-sm max-w-[850px] w-full m-auto rounded-xl">
+        <NeonGradientCard className="max-w-[850px] w-full m-auto rounded-xl">
           <div className="flex flex-col space-y-1.5 p-6">
             <h3 className="text-2xl font-semibold leading-none tracking-tight">
               Our Culture
@@ -22,25 +24,27 @@ const Contact: React.FC = () => {
             Our culture is grounded in respect, teamwork, and continuous
             learning. We are a dedicated team of scientists, engineers, and
             explorers, driven by a passion to advance space research. We foster
-            an environment where creativity is celebrated, new ideas are
-            welcomed, and personal development is prioritized.
+            a collaborative and supportive work environment, embracing new ideas
+            and diverse perspectives.
           </div>
           <div className="p-6 pt-0">
             We are committed to pushing the boundaries of space exploration,
             creating solutions that are not only impactful but also aligned with
             our core values of integrity, innovation, and collaboration. Join us
             as we venture into the unknown and explore the future of space
-            research together.
+            research together.{" "}
           </div>
-          <div className="items-center p-6 pt-0 flex justify-between">
-            <Link href="/support">
-              {" "}
-              <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 rounded bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200 h-10 px-4 py-2">
-                Contact Us
-              </button>
+
+          <CoolMode options={{ particleCount: 100 }}>
+            <Link
+              href="mailto:joinus@galaxycorp.com"
+              className="group relative inline-flex items-center justify-center p-0.5 px-4 py-2 overflow-hidden font-medium text-teal-500 rounded-lg border-2 border-teal-500 hover:text-white hover:bg-teal-500"
+            >
+              <span className="absolute top-0 left-0 w-full h-full  rounded-lg transition-all duration-300 group-hover:left-[-100%] group-hover:top-[-100%] group-hover:w-full group-hover:h-full ease"></span>
+              <span className="relative text-sm">Join Us!</span>
             </Link>
-          </div>
-        </div>
+          </CoolMode>
+        </NeonGradientCard>
       </div>
     </section>
   );
