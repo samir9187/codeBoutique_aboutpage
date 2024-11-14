@@ -58,7 +58,7 @@
 
 // export default Mission;
 
-import React, { useState } from "react";
+import React from "react";
 import { HeroVideoDialog } from "./magicUIComp/HeroVideoDialog"; // Make sure to import the HeroVideoDialog component
 
 const Mission: React.FC = () => {

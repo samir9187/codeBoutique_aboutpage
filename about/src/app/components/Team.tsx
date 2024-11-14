@@ -60,7 +60,7 @@ const Team: React.FC = () => {
           processes and create accessible technologies to enable organizations
           and researchers, big and small, to advance their discoveries and
           missions. Our goal is to make space more accessible, foster
-          innovation, and accelerate humanity's understanding of the universe.
+          innovation, and accelerate humanity understanding of the universe.
         </p>
 
         {/* Team Grid */}
