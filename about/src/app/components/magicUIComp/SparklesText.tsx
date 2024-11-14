@@ -1,6 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+interface Sparkle {
+  id: string;
+  x: string;
+  y: string;
+  color: string;
+  delay: number;
+  scale: number;
+  lifespan: number;
+}
 
 const SparklesText = ({
   text,
