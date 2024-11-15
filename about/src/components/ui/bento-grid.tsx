@@ -1,4 +1,4 @@
-import { ElementType, ReactNode } from "react";
+import { ReactNode } from "react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
@@ -32,13 +32,13 @@ const BentoCard = ({
   href,
   cta,
 }: {
-  name?: string;
+  name: string;
   className: string;
   background: ReactNode;
-  Icon: ElementType;
-  description?: string;
-  href?: string;
-  cta?: string;
+  Icon: any;
+  description: string;
+  href: string;
+  cta: string;
 }) => (
   <div
     key={name}
