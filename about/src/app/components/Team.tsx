@@ -1,4 +1,5 @@
 // Team.tsx
+"use client";
 import React from "react";
 import { MagicCard } from "./magicUIComp/MagicCard"; // Import MagicCard component
 

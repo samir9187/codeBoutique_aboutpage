@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import SparklesText from "./magicUIComp/SparklesText"; // Import SparklesText component
 

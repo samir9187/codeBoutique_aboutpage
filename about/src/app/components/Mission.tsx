@@ -57,7 +57,7 @@
 // };
 
 // export default Mission;
-
+"use client";
 import React from "react";
 import { HeroVideoDialog } from "./magicUIComp/HeroVideoDialog"; // Make sure to import the HeroVideoDialog component
 

@@ -142,7 +142,7 @@
 // };
 
 // export default Navbar;
-
+"use client";
 import React, { useState, useEffect } from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";

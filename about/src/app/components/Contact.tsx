@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { NeonGradientCard } from "./magicUIComp/NeonGradientCard";
 import Link from "next/link";

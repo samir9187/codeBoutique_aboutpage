@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState, useEffect } from "react";
 
 import Hero from "./components/Hero";
@@ -8,6 +8,8 @@ import Timeline from "./components/Timeline";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import { BentoDemo } from "./components/Features";
+
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
@@ -41,9 +43,13 @@ const App: React.FC = () => {
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
       <Hero />
       <Mission />
+      <BentoDemo/>
       <Team />
+      
       <Timeline />
+      
       <Contact />
+      
       <Footer />
     </div>
   );
