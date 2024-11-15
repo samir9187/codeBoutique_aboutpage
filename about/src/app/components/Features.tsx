@@ -5,8 +5,7 @@ import {
   BellIcon,
   CalendarIcon,
   FileTextIcon,
-  GlobeIcon,
-  InputIcon,
+  
 } from "@radix-ui/react-icons";
 import { BentoCard, BentoGrid } from "./magicUIComp/BentoGrid";
 import Marquee from "@/components/ui/marquee";

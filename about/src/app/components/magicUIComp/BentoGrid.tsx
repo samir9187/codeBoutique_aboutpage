@@ -1,6 +1,4 @@
-// components/BentoGrid.tsx
-
-import { ReactNode } from "react";
+import { ReactNode, ElementType } from "react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
@@ -37,7 +35,7 @@ const BentoCard = ({
   name: string;
   className: string;
   background: ReactNode;
-  Icon: any;
+  Icon: ElementType; // <--- Proper typing for React components
   description: string;
   href: string;
   cta: string;
