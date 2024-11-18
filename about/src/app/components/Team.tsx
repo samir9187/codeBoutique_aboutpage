@@ -53,7 +53,7 @@ const Team: React.FC = () => {
         <h2 className="text-2xl sm:text-3xl font-bold md:text-4xl mb-4 md:mb-6 dark:text-white">
           Meet Our Experts
         </h2>
-        <p className="text-sm sm:text-lg font-normal mb-8 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
+        <p className="sm:text-[17px]  text-sm sm:text-lg font-normal mb-8 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
           At GalaxyCorp, our innovative team is dedicated to revolutionizing
           space exploration. We develop cutting-edge technologies and advanced
           research tools to push the boundaries of space science. Committed to

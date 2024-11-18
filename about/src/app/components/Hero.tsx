@@ -11,9 +11,9 @@ const HeroSection: React.FC = () => {
           <div className="md:mr-12 text-center md:text-left mt-8 md:mt-0 flex-1">
             <SparklesText
               text="GalaxyCorp advances space exploration with cutting-edge research and innovative solutions."
-              sparklesCount={15}
+              sparklesCount={25}
               colors={{ first: "#9E7AFF", second: "#FE8BBB" }}
-              className="text-transparent bg-clip-text bg-[linear-gradient(to_right,_#000_0%,_#3c3cbf_50%)] dark:bg-[linear-gradient(to_right,_#3c3cbf_0%,_#FFFFFF_50%)] font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+              className="text-transparent bg-clip-text bg-[linear-gradient(to_right,_#000_0%,_#3c3cbf_50%)] dark:bg-[linear-gradient(to_right,_#3c3cbf_0%,_#FFFFFF_50%)] font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
             />
           </div>
 
@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
               />
             </div>
 
-            <div className="hidden md:block w-24 h-24 sm:w-32 sm:h-32 lg:w-48 lg:h-48 transform rotate-45 border-4 dark:border-blue-500 overflow-hidden">
+            <div className="hidden md:block w-24 h-24 sm:w-40 sm:h-40 lg:w-48 lg:h-48 transform rotate-45 border-4 dark:border-blue-500 overflow-hidden">
               <img
                 alt="GalaxyCorp empowers growth with intelligent hiring solutions."
                 className="w-full h-full object-cover"

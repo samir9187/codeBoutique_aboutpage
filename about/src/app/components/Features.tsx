@@ -116,38 +116,35 @@ const files = [
       ),
     },
   ];
-// export function BentoDemo() {
-//   return (
-//     <div
-//     className="bg-white dark:bg-[rgba(2,8,26,1)] text-black dark:text-white transition-all duration-300"
-//   >
-//     <div className="text-center mb-6 md:mb-10">
-//       <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 text-black dark:text-white">
-//         Our Galactic Features
-//       </h2>
-//     </div>
-//       <BentoGrid className="lg:grid-rows-3">
-//         {features.map((feature) => (
-//           <BentoCard  key={feature.name} {...feature}/>
-//         ))}
-//       </BentoGrid>
-//     </div>
-//   );
-// }
 
-export function BentoDemo() {
-    return (
-      <div className="bg-white dark:bg-[rgba(2,8,26,1)]">
-        <h2 className="text-center text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 text-black dark:text-white">
-          Our Galactic Features
-        </h2>
-        <BentoGrid>
-          {features.map((feature,idx) => (
-            // Use feature.name as the key for uniqueness
-            <BentoCard key={idx} {...feature} />
-          ))}
-        </BentoGrid>
-      </div>
-    );
-  }
+
+// export function BentoDemo() {
+//     return (
+//       <div className="bg-white dark:bg-[rgba(2,8,26,1)]">
+//         <h2 className="text-center text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 text-black dark:text-white">
+//           Our Galactic Features
+//         </h2>
+//         <BentoGrid>
+//           {features.map((feature,idx) => (
+//             // Use feature.name as the key for uniqueness
+//             <BentoCard key={idx} {...feature} />
+//           ))}
+//         </BentoGrid>
+//       </div>
+//     );
+//   }
   
+export function BentoDemo() {
+  return (
+    <div className="bg-white dark:bg-[rgba(2,8,26,1)]">
+      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 text-black dark:text-white">
+        Our Galactic Features
+      </h2> 
+      <BentoGrid>
+        {features.map((feature, idx) => (
+          <BentoCard key={idx} {...feature} />
+        ))}
+      </BentoGrid>
+    </div>
+  );
+}

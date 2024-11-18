@@ -4,12 +4,15 @@ import { BorderBeam } from "./magicUIComp/MagicBeam";
 
 const Timeline: React.FC = () => {
   return (
-    <section className="py-16 bg-white dark:bg-[rgba(2,8,26,1)] text-zinc-900 dark:text-white">
+    <section className="py-6 bg-white dark:bg-[rgba(2,8,26,1)] text-zinc-900 dark:text-white">
       <div className="container px-6 mx-auto text-center">
-        <h2 className="font-bold md:text-4xl mb-6 dark:text-white">
+        {/* <h2 className="font-bold md:text-4xl mb-6 dark:text-white">
           Our Journey
-        </h2>
-        <p className="text-lg font-normal mb-10 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
+        </h2> */}
+         <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 text-black dark:text-white ">
+        Our Journey
+      </h2>
+        <p className="text-lg font-normal mb-10 max-w-2xl mx-auto text-gray-700 dark:text-gray-300 sm:text-[17px]">
           Our journey began with a mission to revolutionize space exploration
           and research. At GalaxyCorp, we are committed to empowering
           scientists, researchers, and space organizations with state-of-the-art
@@ -17,13 +20,13 @@ const Timeline: React.FC = () => {
           informed, unbiased decisions.
         </p>
 
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto  sm:text-[15px] sm:">
           {[
             {
               year: "2019",
               title: "The Beginning",
               description:
-                "Our journey began with a mission to redefine space exploration. We aimed to streamline research processes, eliminate biases in space data analysis, and help organizations make data-driven decisions to explore the universe more efficiently.",
+                "Our journey began with a mission to redefine space exploration. We aimed to streamline researchWe aimed to streamline research processes, eliminate biases in space data analysis, and help organizations make data-driven decisions to explore the universe more efficiently.",
             },
             {
               year: "2021",

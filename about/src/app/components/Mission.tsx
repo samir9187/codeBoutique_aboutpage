@@ -73,7 +73,7 @@ const Mission: React.FC = () => {
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4">
             Our Story
           </h2>
-          <p className="text-sm sm:text-lg opacity-80 mb-3 sm:mb-5">
+          <p className="text-sm sm:text-lg opacity-80 mb-3 sm:mb-5 sm:text-[17px]">
             At GalaxyCorp, we believe in more than just selling products — we
             believe in making a difference. Our journey started with a simple
             goal: to craft the world most comfortable hammocks. But as we grew,
