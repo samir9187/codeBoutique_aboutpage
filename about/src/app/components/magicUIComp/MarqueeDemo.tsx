@@ -55,32 +55,64 @@ const ReviewCard = ({
   body: string;
 }) => {
   return (
+    // <figure
+    //   className={cn(
+    //     "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+    //     // light styles
+    //     "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+    //     // dark styles
+    //     "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+    //   )}
+    // >
+    //   <div className="flex flex-row items-center gap-2">
+    //     <img className="rounded-full" width="32" height="32" alt="" src={img} />
+    //     <div className="flex flex-col">
+    //       <figcaption className="text-sm font-medium dark:text-white">
+    //         {name}
+    //       </figcaption>
+    //       <p className="text-xs font-medium dark:text-white/40">{username}</p>
+    //     </div>
+    //   </div>
+    //   <blockquote className="mt-2 text-sm ">{body}</blockquote>
+    // </figure>
     <figure
-      className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
-        </div>
-      </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
+  className={cn(
+    "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4 sm:w-60 md:w-85 lg:w-[30rem]",
+    // light styles
+    // "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+    // // dark styles
+    "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+  )}
+>
+  <div className="flex flex-row items-center gap-2 md:gap-4">
+    <img
+      className="rounded-full w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
+      width="32"
+      height="32"
+      alt=""
+      src={img}
+   
+    />
+    <div className="flex flex-col">
+      <figcaption className="text-sm sm:text-base lg:text-lg font-medium dark:text-white">
+        {name}
+      </figcaption>
+      <p className="text-xs sm:text-sm lg:text-base font-medium dark:text-white/40">
+        {username}
+      </p>
+    </div>
+  </div>
+  <blockquote className="mt-2 text-sm sm:text-base lg:text-lg">
+    {body}
+  </blockquote>
+</figure>
+
   );
 };
 
 export function MarqueeDemo() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+    <div className="relative flex h-[400px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />

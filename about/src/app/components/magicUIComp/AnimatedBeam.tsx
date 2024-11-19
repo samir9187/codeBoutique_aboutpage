@@ -36,10 +36,10 @@ export function AnimatedBeamDemo() {
 
   return (
     <div
-      className="relative flex h-[370px] w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl"
+      className="relative flex h-[350px] w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl xl:h-[390px]"
       ref={containerRef}
     >
-      <div className="flex size-full flex-col max-w-lg max-h-[280px] items-stretch justify-between gap-10">
+      <div className="flex size-full flex-col max-w-lg max-h-[300px] items-stretch justify-between gap-10">
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div1Ref}>
             <Icons.googleDrive />
@@ -48,11 +48,11 @@ export function AnimatedBeamDemo() {
             <Icons.googleDocs />
           </Circle>
         </div>
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-row items-center justify-between ">
           <Circle ref={div2Ref}>
             <Icons.notion />
           </Circle>
-          <Circle ref={div4Ref} className="size-16">
+          <Circle ref={div4Ref} className="size-16 ">
             <Icons.openai />
           </Circle>
           <Circle ref={div6Ref}>
